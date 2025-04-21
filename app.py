@@ -138,3 +138,9 @@ if __name__ == '__main__':
     # Use debug=True for development environment, allows auto-reload
     # Set debug=False for production
     app.run(debug=True) 
+# Run the Flask app
+if __name__ == '__main__':
+    # Get port from environment variable or default to 5000
+    port = int(os.environ.get('PORT', 5000))
+    # Run app on 0.0.0.0 (all interfaces) on the specified port
+    app.run(host='0.0.0.0', port=port, debug=False)
